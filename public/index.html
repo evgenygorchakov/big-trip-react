@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
     <title>Big Trip</title>
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
   </head>
-
   <body class="page-body">
-    <header class="page-header">
-      <div class="page-body__container  page-header__container">
-        <img class="page-header__logo" src="img/logo.png" width="42" height="42" alt="Trip logo">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-        <div class="trip-main">
-          <section class="trip-main__trip-info  trip-info">
-            <!-- Маршрут -->
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-            <p class="trip-info__cost">
-              Total: &euro;&nbsp;<span class="trip-info__cost-value">0</span>
-            </p>
-          </section>
-
-          <div class="trip-main__trip-controls  trip-controls">
-            <h2 class="visually-hidden">Switch trip view</h2>
-            <!-- Меню -->
-
-            <h2 class="visually-hidden">Filter events</h2>
-            <!-- Фильтры -->
-          </div>
-
-          <button class="trip-main__event-add-btn  btn  btn--big  btn--yellow" type="button">New event</button>
-        </div>
-      </div>
-    </header>
-    <main class="page-body__page-main  page-main">
-      <div class="page-body__container">
-          <section class="trip-events">
-            <h2 class="visually-hidden">Trip events</h2>
-
-            <!-- Сортировка -->
-
-            <!-- Контент -->
-          </section>
-      </div>
-    </main>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 </html>
