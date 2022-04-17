@@ -1,12 +1,12 @@
 import React from "react";
-import { AppLogo } from "./AppLogo";
-import { Button } from "./Button";
+import { Logo } from "../Logo";
+import { Button } from "../Button";
 
-const AppHeader = () => {
+export const AppHeader = () => {
   return (
     <header className="page-header">
       <div className="page-body__container  page-header__container">
-        <AppLogo />
+        <Logo />
 
         <div className="trip-main">
           <section className="trip-main__trip-info  trip-info">
@@ -95,5 +95,3 @@ const AppHeader = () => {
     </header>
   );
 };
-
-export default AppHeader;
