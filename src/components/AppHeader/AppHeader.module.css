@@ -1,0 +1,24 @@
+.header {
+  padding-top: 23px;
+  color: #ffffff;
+  background-color: #078ff0;
+  background-image: url("./header-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .page-header {
+    background-image: url("./header-bg@2x.png");
+  }
+}
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-left: 110px !important;
+}

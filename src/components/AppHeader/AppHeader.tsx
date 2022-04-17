@@ -1,11 +1,12 @@
-import React from "react";
 import { Logo } from "../Logo";
 import { Button } from "../Button";
+import s from "./AppHeader.module.css";
+import { AppContainer } from "../AppContainer";
 
 export const AppHeader = () => {
   return (
-    <header className="page-header">
-      <div className="page-body__container  page-header__container">
+    <header className={s.header}>
+      <AppContainer className={s.container}>
         <Logo />
 
         <div className="trip-main">
@@ -91,7 +92,7 @@ export const AppHeader = () => {
             New event
           </Button>
         </div>
-      </div>
+      </AppContainer>
     </header>
   );
 };
