@@ -344,13 +344,6 @@ main {
   margin-right: 22px;
 }
 
-.trip-events {
-  padding-top: 22px;
-}
-.trip-events--hidden {
-  display: none;
-}
-
 .trip-events__trip-sort {
   margin-bottom: 8px;
 }
