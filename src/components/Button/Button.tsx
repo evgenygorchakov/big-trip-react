@@ -3,14 +3,16 @@ import cn from "classnames";
 import s from "./Button.module.css";
 
 interface IProps {
+  type?: "button" | "submit";
   size?: "middle" | "big";
   color: "yellow" | "blue";
-  className: string;
+  className?: string;
   children: ReactNode;
   disabled?: boolean;
 }
 
 export const Button: FC<IProps> = ({
+  type,
   size = "middle",
   color,
   className,
@@ -26,7 +28,7 @@ export const Button: FC<IProps> = ({
         color === "yellow" && s.yellow,
         className
       )}
-      type="button"
+      type={type}
       disabled={disabled}
     >
       {children}
