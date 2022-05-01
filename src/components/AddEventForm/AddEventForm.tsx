@@ -299,7 +299,12 @@ export const AddEventForm = () => {
           />
         </div>
 
-        <Button color="blue" className={s["event__save-btn"]} type="submit">
+        <Button
+          color="blue"
+          className={s["event__save-btn"]}
+          type="submit"
+          onClick={() => {}}
+        >
           Save
         </Button>
         <button className={s["event__reset-btn"]} type="reset">

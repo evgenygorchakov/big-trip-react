@@ -2,8 +2,14 @@ import { Logo } from "../Logo";
 import { Button } from "../Button";
 import s from "./AppHeader.module.css";
 import { AppContainer } from "../AppContainer";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { eventFormSlice } from "../../store/reducers/EventFormSlice";
 
 export const AppHeader = () => {
+  const { showed } = useAppSelector((state) => state.eventFormReducer);
+  const { showAddEventForm } = eventFormSlice.actions;
+  const dispatch = useAppDispatch();
+
   return (
     <header className={s.header}>
       <AppContainer className={s.container}>
@@ -88,6 +94,8 @@ export const AppHeader = () => {
             className="trip-main__event-add-btn"
             color="yellow"
             size="big"
+            disabled={showed}
+            onClick={() => dispatch(showAddEventForm(true))}
           >
             New event
           </Button>
