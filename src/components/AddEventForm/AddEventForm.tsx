@@ -3,8 +3,17 @@ import cn from "classnames";
 import { Button } from "../Button";
 import eventTypeIcon from "./img/icons/flight.png";
 import { EventDetails } from "../EventDetails";
+import { useAppDispatch } from "../../hooks/redux";
+import { eventFormSlice } from "../../store/reducers/EventFormSlice";
 
 export const AddEventForm = () => {
+  const { showAddEventForm } = eventFormSlice.actions;
+  const dispatch = useAppDispatch();
+
+  const cancelHandler = () => {
+    dispatch(showAddEventForm(false));
+  };
+
   return (
     <form
       className={cn("trip-events__item", s.event, s["event--edit"])}
@@ -307,7 +316,11 @@ export const AddEventForm = () => {
         >
           Save
         </Button>
-        <button className={s["event__reset-btn"]} type="reset">
+        <button
+          className={s["event__reset-btn"]}
+          type="reset"
+          onClick={() => cancelHandler()}
+        >
           Cancel
         </button>
       </header>

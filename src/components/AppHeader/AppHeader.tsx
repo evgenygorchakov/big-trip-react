@@ -10,6 +10,8 @@ export const AppHeader = () => {
   const { showAddEventForm } = eventFormSlice.actions;
   const dispatch = useAppDispatch();
 
+  const showAddEventFormHandler = () => dispatch(showAddEventForm(true));
+
   return (
     <header className={s.header}>
       <AppContainer className={s.container}>
@@ -95,7 +97,7 @@ export const AppHeader = () => {
             color="yellow"
             size="big"
             disabled={showed}
-            onClick={() => dispatch(showAddEventForm(true))}
+            onClick={() => showAddEventFormHandler()}
           >
             New event
           </Button>
