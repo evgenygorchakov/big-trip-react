@@ -1,12 +1,12 @@
-import s from "./AddEventForm.module.css";
+import s from "./AddPointForm.module.css";
 import cn from "classnames";
 import { Button } from "../Button";
 import eventTypeIcon from "./img/icons/flight.png";
-import { EventDetails } from "../EventDetails";
+import { PointDetails } from "../PointDetails";
 import { useAppDispatch } from "../../hooks/redux";
 import { eventFormSlice } from "../../store/reducers/EventFormSlice";
 
-export const AddEventForm = () => {
+export const AddPointForm = () => {
   const { showAddEventForm } = eventFormSlice.actions;
   const dispatch = useAppDispatch();
 
@@ -325,7 +325,7 @@ export const AddEventForm = () => {
         </button>
       </header>
 
-      <EventDetails />
+      <PointDetails />
     </form>
   );
 };

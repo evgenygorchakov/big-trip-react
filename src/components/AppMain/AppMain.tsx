@@ -1,12 +1,13 @@
+import { FC } from "react";
 import { AppContainer } from "../AppContainer";
-import { TripEvents } from "../TripEvents";
+import { TripPoints } from "../TripPoints";
 import s from "./AppMain.module.css";
 
-export const AppMain = () => {
+export const AppMain: FC = () => {
   return (
     <main className={s.main}>
       <AppContainer>
-        <TripEvents />
+        <TripPoints />
       </AppContainer>
     </main>
   );

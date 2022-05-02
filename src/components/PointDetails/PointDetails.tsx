@@ -1,4 +1,5 @@
-import s from "./EventDetails.module.css";
+import { FC } from "react";
+import s from "./PointDetails.module.css";
 import cn from "classnames";
 import photo1 from "./photos/1.jpg";
 import photo2 from "./photos/2.jpg";
@@ -6,7 +7,7 @@ import photo3 from "./photos/3.jpg";
 import photo4 from "./photos/4.jpg";
 import photo5 from "./photos/5.jpg";
 
-export const EventDetails = () => {
+export const PointDetails: FC = () => {
   return (
     <section className={s["event__details"]}>
       <section className={cn(s["event__section"], s["event__section--offers"])}>

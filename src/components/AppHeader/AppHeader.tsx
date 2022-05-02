@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Logo } from "../Logo";
 import { Button } from "../Button";
 import s from "./AppHeader.module.css";
@@ -5,7 +6,7 @@ import { AppContainer } from "../AppContainer";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { eventFormSlice } from "../../store/reducers/EventFormSlice";
 
-export const AppHeader = () => {
+export const AppHeader: FC = () => {
   const { showed } = useAppSelector((state) => state.eventFormReducer);
   const { showAddEventForm } = eventFormSlice.actions;
   const dispatch = useAppDispatch();
