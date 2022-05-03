@@ -4,11 +4,11 @@ import { Button } from "../Button";
 import s from "./AppHeader.module.css";
 import { AppContainer } from "../AppContainer";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { eventFormSlice } from "../../store/reducers/EventFormSlice";
+import { pointSlice } from "../../store/reducers/PointSlice";
 
 export const AppHeader: FC = () => {
-  const { showed } = useAppSelector((state) => state.eventFormReducer);
-  const { showAddEventForm } = eventFormSlice.actions;
+  const { showed } = useAppSelector((state) => state.pointReducer);
+  const { showAddEventForm } = pointSlice.actions;
   const dispatch = useAppDispatch();
 
   const showAddEventFormHandler = () => dispatch(showAddEventForm(true));

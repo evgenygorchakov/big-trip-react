@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { AppContainer } from "../AppContainer";
-import { TripPoints } from "../TripPoints";
+import { TripEvents } from "../TripEvents";
 import s from "./AppMain.module.css";
 
 export const AppMain: FC = () => {
   return (
     <main className={s.main}>
       <AppContainer>
-        <TripPoints />
+        <TripEvents />
       </AppContainer>
     </main>
   );

@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface EventForm {
+interface IPointState {
   showed: boolean;
 }
 
-const initialState: EventForm = {
+const initialState: IPointState = {
   showed: false,
 };
 
-export const eventFormSlice = createSlice({
+export const pointSlice = createSlice({
   name: "eventForm",
   initialState,
   reducers: {
@@ -18,4 +18,4 @@ export const eventFormSlice = createSlice({
   },
 });
 
-export default eventFormSlice.reducer;
+export default pointSlice.reducer;

@@ -4,10 +4,10 @@ import { Button } from "../Button";
 import eventTypeIcon from "./img/icons/flight.png";
 import { PointDetails } from "../PointDetails";
 import { useAppDispatch } from "../../hooks/redux";
-import { eventFormSlice } from "../../store/reducers/EventFormSlice";
+import { pointSlice } from "../../store/reducers/PointSlice";
 
 export const AddPointForm = () => {
-  const { showAddEventForm } = eventFormSlice.actions;
+  const { showAddEventForm } = pointSlice.actions;
   const dispatch = useAppDispatch();
 
   const cancelHandler = () => {
