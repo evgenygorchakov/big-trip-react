@@ -1,13 +1,17 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import eventFormReducer from "./reducers/EventFormSlice";
+import { pointsApi } from "../api/PointsApi";
+import pointReducer from "./reducers/PointSlice";
 
 const rootReducer = combineReducers({
-  eventFormReducer,
+  pointReducer: pointReducer,
+  [pointsApi.reducerPath]: pointsApi.reducer,
 });
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(pointsApi.middleware),
   });
 };
 
