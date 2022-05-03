@@ -6,8 +6,10 @@ import { TripDays } from "../TripDays";
 import { useGetPointsQuery } from "../../api/PointsApi";
 
 export const TripEvents: FC = () => {
-  const { showed } = useAppSelector((state) => state.pointReducer);
-  const { data } = useGetPointsQuery("points");
+  const { addEventFormShowed: showed } = useAppSelector(
+    (state) => state.pointReducer
+  );
+  const { data, isLoading } = useGetPointsQuery("points");
 
   return (
     <section className={s.root}>
@@ -15,11 +17,13 @@ export const TripEvents: FC = () => {
 
       {showed && <AddPointForm />}
 
-      {data ? (
-        <TripDays />
-      ) : (
+      {data && data.length > 0 && <TripDays />}
+
+      {isLoading && <p className="trip-events__msg">Loading...</p>}
+
+      {data && data.length === 0 && (
         <p className="trip-events__msg">
-          Click New Event to create your first point
+          Click New Event to create your first point"
         </p>
       )}
     </section>

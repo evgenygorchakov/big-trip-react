@@ -7,7 +7,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { pointSlice } from "../../store/reducers/PointSlice";
 
 export const AppHeader: FC = () => {
-  const { showed } = useAppSelector((state) => state.pointReducer);
+  const { addEventFormShowed } = useAppSelector((state) => state.pointReducer);
   const { showAddEventForm } = pointSlice.actions;
   const dispatch = useAppDispatch();
 
@@ -97,7 +97,7 @@ export const AppHeader: FC = () => {
             className="trip-main__event-add-btn"
             color="yellow"
             size="big"
-            disabled={showed}
+            disabled={addEventFormShowed}
             onClick={() => showAddEventFormHandler()}
           >
             New event
