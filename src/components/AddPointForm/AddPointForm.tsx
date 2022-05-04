@@ -1,10 +1,10 @@
 import s from "./AddPointForm.module.css";
 import cn from "classnames";
 import { Button } from "../Button";
-import eventTypeIcon from "./img/icons/flight.png";
 import { PointDetails } from "../PointDetails";
 import { useAppDispatch } from "../../hooks/redux";
 import { pointSlice } from "../../store/reducers/PointSlice";
+import eventTypeIcon from "./img/flight.png";
 
 export const AddPointForm = () => {
   const { showAddEventForm } = pointSlice.actions;

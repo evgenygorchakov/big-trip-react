@@ -363,17 +363,6 @@ main {
   display: none;
 }
 
-.trip-events__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.trip-events__item {
-  margin-bottom: 54px;
-  margin-left: auto;
-}
-
 .trip-sort {
   display: -ms-flexbox;
   display: flex;
@@ -454,36 +443,6 @@ main {
 .trip-sort__btn--by-decrease .trip-sort__direction-icon {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.day {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.day__info {
-  width: 55px;
-  padding-top: 13px;
-  margin-right: 25px;
-}
-
-.day__counter {
-  display: block;
-  margin-bottom: 4px;
-  font-weight: 500;
-  font-size: 52px;
-  line-height: 61px;
-  text-align: center;
-}
-
-.day__date {
-  display: block;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 .statistics {
