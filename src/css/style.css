@@ -456,12 +456,6 @@ main {
   transform: rotate(180deg);
 }
 
-.trip-days {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .day {
   display: -ms-flexbox;
   display: flex;
